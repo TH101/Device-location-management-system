@@ -67,9 +67,14 @@ import imageUploadRoute from "./routes/imageUploadRoute.js";
 import categoryImageRoute from "./routes/categoryImageRoute.js"
 import categoryRoute from "./routes/category.js";
 import productRoute from "./routes/product.js";
+import deviceRoute from "./routes/device.js";
+import locationRoute from "./routes/location.js";
 //routes
+app.use(locationRoute);
+app.use(deviceRoute);
 app.use(categoryRoute); 
 app.use(productRoute);
 app.use("/api", imageUploadRoute); 
-app.use("/api", categoryImageRoute); 
+app.use("/api", categoryImageRoute);
+ 
 
